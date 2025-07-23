@@ -1,0 +1,85 @@
+sign up:
+
+curl --location 'http://localhost/exchange/accept_reject.php' \
+--form 'action="complaint"' \
+--form 'seller_mail_id="hemaprakash@gmail.com"' \
+--form 'requested_mail_id="happy@boy.com"' \
+--form 'unique_id="EL599"' \
+--form 'rating="3"' \
+--form 'note="i was accepting the request for 13000 ampunt."'
+
+
+login:
+
+curl --location 'http://localhost/exchange/login.php?mail_id=happy%40boy.com&password=123h'
+
+
+Upload to exchange items:
+
+
+curl --location 'http://localhost/exchange/upload_to_exchange_items.php' \
+--form 'image=@"lCNeyxmBC/arrow.png"' \
+--form 'item_name="iPhone 12"' \
+--form 'category="vehicles"' \
+--form 'price="15000"' \
+--form 'imei_number="AB1234XYZ567"' \
+--form 'description="max 300 words"' \
+--form 'mail_id="happy@boy.com"'
+
+
+
+view exchange items:
+
+
+curl --location 'http://localhost/exchange/view_exchange_items.php'
+
+
+send request:
+
+curl --location 'http://localhost/exchange/send_request.php' \
+--form 'mail_id="happy@boy.com"' \
+--form 'unique_id="EL599"' \
+--form 'message="I am interested in buying this item. Please contact me."' \
+--form 'imei_number="AB1234XYZ567"'
+
+
+chat message:
+
+curl --location 'http://localhost/exchange/chatting.php' \
+--form 'action="send"' \
+--form 'action="load"' \
+--form 'sender_email="happy@boy.com"' \
+--form 'receiver_email="hemaprakash@gmail.com"' \
+--form 'message="Hello yes tell me."'
+
+
+display request :
+
+curl --location 'http://localhost/exchange/display_request.php?seller_mail_id=hemaprakash%40gmail.com'
+
+
+accept reject:
+
+curl --location 'http://localhost/exchange/accept_reject.php' \
+--form 'action="complaint"' \
+--form 'seller_mail_id="hemaprakash@gmail.com"' \
+--form 'requested_mail_id="happy@boy.com"' \
+--form 'unique_id="EL599"' \
+--form 'rating="3"' \
+--form 'note="i was accepting the request for 13000 ampunt."'
+
+
+view profile:
+
+
+curl --location 'http://localhost/exchange/view_profile.php?mail_id=hemaprakash%40gmail.com'
+
+
+update profile:
+
+
+curl --location 'http://localhost/exchange/update_profile.php' \
+--form 'mail_id="hemaprakash@gmail.com"' \
+--form 'name="Hemaprakash P"' \
+--form 'phone_number="9884373559"' \
+--form 'location="12.9715987,77.594566"'
